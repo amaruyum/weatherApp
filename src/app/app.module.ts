@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherService } from './weather.service';
 import { FormsModule } from '@angular/forms';
+import { RightWeatherComponent } from './right-weather/right-weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherComponent
+    WeatherComponent,
+    RightWeatherComponent
   ],
   imports: [
     BrowserModule,
