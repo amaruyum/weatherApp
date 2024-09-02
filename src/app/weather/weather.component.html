@@ -1,16 +1,50 @@
-<div>
-    <h1> Weather Application</h1>
-
-    <form>
-        <input type="text" name="cityName" placeholder = "Enter a city name" [(ngModel)]="city">
-        <button type="button" (click) = "getWeather()">Get Weather</button>
-    </form>
-
-    <div *ngIf="weatherData && weatherData.name">
-        <h2>{{ weatherData.name }}</h2>
+<div class="left-container p-3">
+    <div class="left-container-bar mb-3 d-flex align-items-center">
+    <div class="search-icon me-2">
+        <i class="bi bi-search" for="search" ></i>
     </div>
-
-    <p>Temperature: {{ weatherData.main.temp }}</p>
-    <p>Humidity: {{ weatherData.main.humidity }}</p>
-    <p>Weather: {{ weatherData.weather[0].description }}</p>
+    <div class="search-input"> 
+        <input type="text" placeholder="Search for places" [(ngModel)]="city" (change)="getWeather()">
+    </div>
+    </div>
+    <div class="left-container-data" *ngIf="weatherData">
+    <div class="left-container-temperature-data text-center mb-3">
+        <div class="left-container-temperature-img">
+            <img [src]="getWeatherIcon()">
+        </div>
+        <div class="left-container-temperature-value display-4">
+        {{ weatherData.main.temp | number: '1.0-0' }}<sup>°C</sup>
+        </div>
+        <div class="left-container-day-time text-muted">
+            {{ (weatherData.dt * 1000) | date:'EEEE, MMMM d' }},<span> {{ (weatherData.dt * 1000) | date:'shortTime' }}</span>
+        </div>
+    </div>
+    <div class="dividing-line"></div>
+    <div class="left-container-extra-data">
+        <div class="left-container-summary d-flex align-items-center mb-2">
+        <div class="left-container-summary-img me-2">
+            <i class="bi bi-cloud-fill"></i>
+        </div>
+        <div class="left-container-summary-value">
+            {{ weatherData.weather[0].description | titlecase }}
+        </div>
+        </div>
+        <div class="left-container-rain-data d-flex align-items-center mb-2" *ngIf="weatherData.rain">
+        <div class="left-container-rain-data-img me-2">
+            <i class="bi bi-cloud-drizzle-fill"></i>
+        </div>
+        <div class="left-container-rain-data-value">
+            Rain - {{ weatherData.rain['1h'] }}% 
+        </div>
+        </div>
+        <div class="left-container-location">
+        <div class="left-container-location-img me-2">
+            <img src="./../../assets/img/91441-h.jpg" alt="">
+        </div>
+        <div class="left-container-location-name">
+            {{ weatherData.name }}, {{ weatherData.sys.country }}
+        </div>
+        </div>
+    </div>
+    </div>
 </div>

@@ -6,24 +6,24 @@
     align-items: center;
 }
 
-.containerWeather{
+.container-weather{
     height: 80vh;
     width: 70vw;
     display: flex;
     flex-direction: row;
 }
 
-.leftContainer {
+.left-container {
     flex: 3;
-    background-color: #b02277;
+    background-color: #7DC9E7;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     color: #000000;
 }
 
-.rightContainer{
+.right-container{
     flex: 7;
-    background-color: #ffffff;
+    background-color: #E5F1F6;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }

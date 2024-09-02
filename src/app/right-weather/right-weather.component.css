@@ -1,0 +1,216 @@
+.right-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* CSS for bar */
+.right-container-bar {
+    align-items: center;    
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    border-top-right-radius: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+/* CSS for bar tabs*/
+.bar-tabs{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+/* CSS for today and week tabs*/
+.today{
+    margin-right: 15px;
+    color: #979797;
+}
+
+.today:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+.today-active {
+    color: #000000;
+}
+
+.week{
+    color: #979797;
+}
+
+.week:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+.week-active{
+    color: #000000;
+}
+
+/*CSS for underline*/
+.underline{
+    width: 45px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.underline-today{
+    transform: translateX(-110px);
+}
+
+.underline-week{
+    transform: translateX(-45px);
+}
+
+.right-container-data{
+    flex: 12;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: -40px;
+}
+
+.right-container-week{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    width: 80px;
+    height: 100px;
+    background-color: #D4E6E2;
+    border-radius: 10px;
+    margin-left: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+.cards-day{
+    margin: 5px;
+}
+
+.card-temperature-img img{
+    width: 40px;
+    height: 40px;
+}
+.card-temperature-value{
+    margin: 5px;
+    
+}
+
+.right-container-today{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container-today-details{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-today-title{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex: 2;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.right-container-today-cards{
+    flex: 8;
+    display: flex;
+}
+
+.right-container-today-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #D4E6E2;
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+.right-container-today-card-title{
+    flex: 1;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.right-container-today-card-value{
+    flex: 1;
+    font-size: xx-large;
+}
+
+.wind-status-value{
+    flex: 2;
+    font-size: 50px;
+    text-align: center;
+    
+}
+
+.sunrise-sunset-value{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.sunrise{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.sunrise-img{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.sunrise-img img{
+    width: 60px;
+    height: 60px;
+}
+
+.sunrise-time{
+    flex: 2;
+    margin-top: 20px;
+    font-size: x-large;
+}
+
+.sunset{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.sunset-img{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.sunset-img img{
+    width: 60px;
+    height: 60px;
+}
+
+.sunset-time{
+    flex: 2;
+    margin-top: 20px;
+    font-size: x-large;
+}

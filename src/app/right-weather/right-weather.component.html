@@ -1,1 +1,105 @@
-<p>right-weather works!</p>
+<div class="right-container">
+    <div class="right-container-bar">
+    <div class="bar-tabs">
+        <div class="today" (click)="onTodayClick()" [ngClass]="today ? 'today today-active' : 'today'">Today</div>
+        <div class="week" (click)="onWeekClick()" [ngClass]="week ? 'week week-active' : 'week'">Week</div>
+        <div class="underline" [className]="today ? 'underline underline-today' : 'underline underline-week'"></div>
+    </div>
+    </div>
+
+    <div class="right-container-data">
+      <div class="right-container-week" *ngIf="week">
+        <div class="cards" *ngFor="let day of dailyForecast">
+        <div class="cards-day">{{ day.dt * 1000 | date: 'EEE' }}</div>
+        <div class="card-temperature-img">
+            <img [src]="'http://openweathermap.org/img/wn/' + day.weather[0].icon + '@2x.png'" alt="">
+        </div>
+        <div class="card-temperature-value">
+            <span class="temperature-max">{{ day.main.temp_max | number: '1.0-0' }}° . </span>  
+            <span class="temperature-min">{{ day.main.temp_min | number: '1.0-0' }}°</span>
+        </div>
+        </div>
+    </div>
+
+      <div class="right-container-today" *ngIf="today">
+        <div class="cards" *ngFor="let hour of hourlyForecast">
+        <div class="cards-day">{{ hour.dt * 1000 | date: 'HH:00' }}</div>
+        <div class="card-temperature-img">
+            <img [src]="'http://openweathermap.org/img/wn/' + hour.weather[0].icon + '@2x.png'" alt="">
+        </div>
+        <div class="card-temperature-value">
+            {{ hour.main.temp | number: '1.0-0' }}°
+        </div>
+        </div>
+    </div>
+
+    <div class="right-container-today-details">
+        <div class="right-container-today-title">Today's Highlight</div>
+        <div class="right-container-today-cards">
+        <div class="right-container-today-card">
+            <div class="right-container-today-card-title">
+            Pressure
+            </div>
+            <div class="wind-status-value">{{ weatherData?.main.pressure | number: '1.0-0' }}</div>
+        </div>
+
+        <div class="right-container-today-card">
+            <div class="right-container-today-card-title">
+            Wind Status
+            </div>
+            <div class="wind-status-value">
+            {{ weatherData?.wind.speed | number: '1.0-0' }} km/h
+            </div>
+        </div>
+
+        <div class="right-container-today-card">
+            <div class="right-container-today-card-title">
+            Sunrise & Sunset
+            </div>
+            <div class="sunrise-sunset-value">
+            <div class="sunrise">
+                <div class="sunrise-img">
+                <img src="./../../assets/img/sunrise.png" alt="">
+                </div>
+                <div class="sunrise-time"> {{ sunrise || 'N/A' }} </div>
+            </div>
+            <div class="sunset">
+                <div class="sunset-img">
+                <img src="./../../assets/img/sunset.png" alt="">
+                </div>
+                <div class="sunset-time">{{ sunset || 'N/A' }}</div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="right-container-today-cards">
+        <div class="right-container-today-card">
+            <div class="right-container-today-card-title">
+            Humidity
+            </div>
+            <div class="wind-status-value">
+            {{ weatherData?.main.humidity | number: '1.0-0' }} <sup>%</sup>
+            </div>
+        </div>
+
+        <div class="right-container-today-card">
+            <div class="right-container-today-card-title">
+            Visibility
+            </div>
+            <div class="wind-status-value">
+            {{ weatherData?.visibility / 1000 | number: '1.0-1' }} km
+            </div>
+        </div>
+
+        <div class="right-container-today-card">
+            <div class="right-container-today-card-title">
+            Air Quality
+            </div>
+            <div class="wind-status-value">
+                {{ airQuality?.list[0]?.main?.aqi || 'N/A' }} 
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

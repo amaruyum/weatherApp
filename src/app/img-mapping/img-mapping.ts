@@ -1,0 +1,21 @@
+
+export const ICON_MAPPING: {[key: string]: string} = {
+    '01d': 'assets/img/sun.png',
+    '01n': 'assets/img/sun.png',
+    '02d': 'assets/img/sunnyCloudyRain.png',
+    '03d': 'assets/img/cloudy-day.png',
+    '04d': 'assets/img/overcast.png',
+    '05d': 'assets/img/partly-cloudy.png',
+    '06d': 'assets/img/rain.png',
+    '07d': 'assets/img/storm.png',
+    '08d': 'assets/img/light-rain.png',
+    '09d': 'assets/img/default.png',
+    '02n': 'assets/img/sunnyCloudyRain.png',
+    '03n': 'assets/img/cloudy-day.png',
+    '04n': 'assets/img/overcast.png',
+    '05n': 'assets/img/partly-cloudy.png',
+    '06n': 'assets/img/rain.png',
+    '07n': 'assets/img/storm.png',
+    '08n': 'assets/img/light-rain.png',
+    '09n': 'assets/img/default.png',
+};
