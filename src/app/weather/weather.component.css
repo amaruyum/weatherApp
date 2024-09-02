@@ -1,83 +1,90 @@
-.left-container{
+.left-container {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 20px; 
 }
-/*CSS for left container bar*/
 
-.left-container-bar{
+/* CSS for left container bar */
+.left-container-bar {
     flex: 2;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px; 
 }
 
-.search-icon{
+.search-icon {
     flex: 1;
     text-align: right;
     margin-right: 5px;
 }
 
-.search-input{
+.search-input {
     flex: 4;
+    margin-left: 10px; 
 }
 
-.search-input input{
+.search-input input {
     border: none;
     background-color: #7DC9E7;
     padding: 8px;
     font-size: 20px;
+    width: 100%; 
+    border-radius: 5px; 
 }
 
-/*CSS for left container data*/
-.left-container-data{
+/* CSS for left container data */
+.left-container-data {
     flex: 12;
     display: flex;
-    margin-left: 30px;
-    margin-right: 30px;
     flex-direction: column;
+    padding: 20px; 
 }
 
-/*CSS for temperature and extra data*/
-.left-container-temperature-data{
+/* CSS for temperature and extra data */
+.left-container-temperature-data {
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center; 
+    margin-bottom: 20px; 
 }
 
-.left-container-temperature-img{
+.left-container-temperature-img {
     flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.left-container-temperature-img img{
-    width: 200px;
-    height: 200px;
+.left-container-temperature-img img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto; 
 }
 
-.left-container-temperature-value{
+.left-container-temperature-value {
     flex: 1;
-    font-size: 70px;
+    font-size: 50px; 
+    text-align: center; 
 }
 
-.left-container-temperature-value sup{
+.left-container-temperature-value sup {
     position: relative;
-    font-size: 40px;
+    font-size: 30px; 
 }
 
-
-.left-container-day-time{
+.left-container-day-time {
     flex: 1;
     font-weight: 500;
     font-size: 20px;
+    text-align: center; 
 }
 
-.left-container-day-time span{
-    color: #ffffff;
-}
-
-.dividing-line{
+.dividing-line {
     height: 2px;
     width: 100%;
     background-color: #7DC9E7;
@@ -85,52 +92,55 @@
     margin-bottom: 20px;
 }
 
-/*CSS etra data*/
-.left-container-extra-data{
+/* CSS extra data */
+.left-container-extra-data {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
-.left-container-summary{
+.left-container-summary {
     flex: 1;
     display: flex;
     flex-direction: row;
     font-size: large;
+    margin-bottom: 10px; 
 }
 
-.left-container-summary-img{
+.left-container-summary-img {
     margin-right: 8px;
 }
 
-.left-container-rain-data{
+.left-container-rain-data {
     flex: 1;
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px; 
 }
 
-.left-container-rain-data-img{
+.left-container-rain-data-img {
     margin-right: 8px;
 }
 
-.left-container-location{
+.left-container-location {
     flex: 3;
     text-align: center;
-
 }
 
-.left-container-location-img{
+.left-container-location-img {
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
-.left-container-location-img img{
-    width: 300px;
-    height: 100px;
+.left-container-location-img img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
     border-radius: 20px;
 }
 
-.left-container-location-name{
+.left-container-location-name {
     margin-top: -60px;
     font-size: medium;
     font-weight: bold;
