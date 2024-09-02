@@ -35,7 +35,7 @@ export class RightWeatherComponent implements OnInit {
   }
 
   getForecast(lat: number, lon: number): void {
-    const apiKey = '584a471ebac0caa029abc42f2c8e4623'; // Sustituye con tu clave API
+    const apiKey = '584a471ebac0caa029abc42f2c8e4623';
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     this.http.get(url).subscribe((data: any) => {
@@ -62,7 +62,7 @@ export class RightWeatherComponent implements OnInit {
   }
   
   getAirQuality(lat: number, lon: number): void {
-    const apiKey = '584a471ebac0caa029abc42f2c8e4623'; // Sustituye con tu clave API
+    const apiKey = '584a471ebac0caa029abc42f2c8e4623';
     const url = `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
     this.http.get(url).subscribe((data: any) => {
@@ -72,7 +72,7 @@ export class RightWeatherComponent implements OnInit {
   }
 
   getSunriseSunset(lat: number, lon: number): void {
-    const apiKey = '584a471ebac0caa029abc42f2c8e4623'; // Sustituye con tu clave API
+    const apiKey = '584a471ebac0caa029abc42f2c8e4623';
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     this.http.get(url).subscribe((data: any) => {
