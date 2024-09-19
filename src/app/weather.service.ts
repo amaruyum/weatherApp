@@ -7,7 +7,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class WeatherService {
     
-    private apikey: string = '584a471ebac0caa029abc42f2c8e4623';
+    private apikey: string = '';
     private citySubject = new BehaviorSubject<string>('Quito');
     private weatherDataSubject = new BehaviorSubject<any>(null);
 
